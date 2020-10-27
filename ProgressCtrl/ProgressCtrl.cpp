@@ -1,7 +1,5 @@
 #include "ProgressCtrl.h"
 
-/* made by changhee.byun [NexStreaming Audio Solution] */
-
 ProgressCtrl::ProgressCtrl()
 {
 	_global_max = 100;	
@@ -41,8 +39,8 @@ int ProgressCtrl::SetProgress(int progress)
 		auto iter_local_min = _local_min.rbegin();
 		auto iter_local_max = _local_max.rbegin();
 
-		while (		iter_local_min != _local_min.rend() 
-				&&	iter_local_max != _local_max.rend()) 
+		while (   iter_local_min != _local_min.rend() 
+		       && iter_local_max != _local_max.rend()) 
 		{
 			current = (int)((float)(current * *iter_local_max) * 0.01f);
 			current += *iter_local_min;
@@ -114,17 +112,17 @@ void ProgressCtrl::SetLocalMin(int min)
 }
 
 
-int			ProgressCtrl::GetGlobalMax()
+int ProgressCtrl::GetGlobalMax()
 {
 	return _global_max;
 }
 
-int			ProgressCtrl::GetGlobalMin()
+int	ProgressCtrl::GetGlobalMin()
 {
 	return _global_min;
 }
 
-int			ProgressCtrl::GetCurrentLocalMax()
+int	ProgressCtrl::GetCurrentLocalMax()
 {	
 	if (_local_max.size() != 0)
 	{

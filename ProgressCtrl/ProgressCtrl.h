@@ -224,13 +224,13 @@ public:
 
 public: //getter    
 	ProgressCallbackFunction GetCallbackMethod();
-	void*		GetContext();
+	void* GetContext();
 
-	int			GetGlobalMax();
-	int			GetGlobalMin();
+	int	GetGlobalMax();
+	int	GetGlobalMin();
 
-	int			GetCurrentLocalMax();
-	int			GetCurrentLocalMin();
+	int	GetCurrentLocalMax();
+	int	GetCurrentLocalMin();
 
 
 public:
@@ -245,10 +245,10 @@ private :
 	std::vector<int> _local_min;	
 	
 
-	ProgressCallbackFunction	_progress_callback;
-	void*						_callback_context;
+	ProgressCallbackFunction _progress_callback;
+	void* _callback_context;
 
-	int							_previous_progress;
+	int	_previous_progress;
 
 	void SetLocalMin(int min);
 };
